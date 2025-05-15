@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recruit AI - Intelligent Recruitment Platform | Final Year Project</title>
+    <meta name="description" content="Recruit AI is an intelligent platform that streamlines the recruitment process by matching job seekers with appropriate opportunities based on skill assessments and logical testing.">
+    <meta name="keywords" content="recruit ai, recruitment platform, job matching, skill assessment, final year project">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Recruit AI",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "description": "An intelligent recruitment platform that streamlines hiring by matching job seekers with positions based on objective skill assessments and logical testing.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "FYP Student"
+      },
+      "audience": {
+        "@type": "Audience",
+        "audienceType": ["Job Seekers", "Recruiters", "HR Professionals"]
+      },
+      "softwareHelp": {
+        "@type": "CreativeWork",
+        "name": "Recruit AI Documentation",
+        "url": "https://github.com/username/recruit-ai/docs"
+      },
+      "codeRepository": "https://github.com/Muhammadqasim8/RecuritAI.git",
+      "programmingLanguage": ["JavaScript", "Python", "React", "Node.js"],
+      "keywords": ["recruitment", "AI matching", "skill assessment", "talent acquisition", "HR tech"],
+      "datePublished": "2025-05-15",
+      "license": "https://opensource.org/licenses/MIT",
+      "potentialAction": [
+        {
+          "@type": "UseAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://github.com/Muhammadqasim8/RecuritAI.git",
+            "description": "Access the demo version of Recruit AI"
+          }
+        },
+        {
+          "@type": "DiscoverAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://github.com/username/recruit-ai/blob/main/README.md",
+            "description": "Read complete documentation of the Recruit AI project"
+          }
+        }
+      ],
+      "additionalType": "https://schema.org/ResearchProject",
+      "funder": {
+        "@type": "Organization",
+        "name": "University Department",
+        "url": "https://university.edu/department"
+      },
+      "dataset": {
+        "@type": "Dataset",
+        "name": "Recruit AI Assessment Dataset",
+        "description": "Anonymized data from skill assessments and testing",
+        "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+        "creator": {
+          "@type": "Person",
+          "name": "FYP Student"
+        }
+      },
+      "hasPart": [
+        {
+          "@type": "SoftwareApplication",
+          "name": "Assessment Module",
+          "description": "Handles skill and logical testing for job seekers"
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "Recommendation Engine",
+          "description": "Matches candidates to suitable job positions based on test results"
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "Admin Dashboard",
+          "description": "Allows administrators to manage test questions and assessment criteria"
+        }
+      ]
+    }
+    </script>
+    
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2980b9;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+            --accent-color: #e74c3c;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            text-align: center;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+        }
+        
+        .cta-button:hover {
+            background-color: #c0392b;
+        }
+        
+        main {
+            padding: 3rem 0;
+        }
+        
+        section {
+            margin-bottom: 3rem;
+        }
+        
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .card-icon {
+            background-color: var(--primary-color);
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+        }
+        
+        .card-content {
+            padding: 1.5rem;
+        }
+        
+        .card h3 {
+            color: var(--dark-color);
+            margin-top: 0;
+        }
+        
+        .features {
+            background-color: var(--light-color);
+            padding: 3rem 0;
+        }
+        
+        .feature-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .feature-list li {
+            margin-bottom: 1rem;
+            padding-left: 30px;
+            position: relative;
+        }
+        
+        .feature-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+        
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .tech-badge {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+        
+        .section-heading {
+            color: var(--dark-color);
+            position: relative;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .section-heading:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100px;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+        
+        .implementation img {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        
+        .github-section {
+            background-color: #f5f5f5;
+            padding: 3rem 0;
+            text-align: center;
+        }
+        
+        .fair-principles {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 2rem;
+        }
+        
+        .fair-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .fair-card {
+            background-color: var(--light-color);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .fair-card h4 {
+            margin-top: 0;
+            color: var(--primary-color);
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .card-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="hero">
+                <h1>Recruit AI</h1>
+                <p>Revolutionizing recruitment through intelligent skill assessment and machine learning</p>
+                <a href="https://github.com/Muhammadqasim8/RecuritAI.git" class="cta-button">View on GitHub</a>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <!-- Project Overview -->
+            <section id="overview">
+                <h2 class="section-heading">Project Overview</h2>
+                <p>Recruit AI is a comprehensive recruitment platform designed to streamline the hiring process for both job seekers and recruiters. The system employs intelligent assessment mechanisms to evaluate candidates' skills and logical aptitude, creating an objective basis for job matching and recommendations.</p>
+                
+                <div class="card-container">
+                    <div class="card">
+                        <div class="card-icon">👨‍💼</div>
+                        <div class="card-content">
+                            <h3>For Job Seekers</h3>
+                            <p>Demonstrate your skills through objective tests, receive personalized job recommendations based on your strengths, and stand out to recruiters with verified skill ratings.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-icon">🔍</div>
+                        <div class="card-content">
+                            <h3>For Recruiters</h3>
+                            <p>Find pre-assessed candidates that match your requirements, reduce hiring time by focusing on qualified applicants, and make data-driven recruitment decisions.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-icon">⚙️</div>
+                        <div class="card-content">
+                            <h3>For Administrators</h3>
+                            <p>Manage assessment content, customize tests for different technologies and skills, and maintain the integrity of the evaluation system.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Features Section -->
+            <section id="features" class="features">
+                <div class="container">
+                    <h2 class="section-heading">Key Features</h2>
+                    
+                    <div class="card-container">
+                        <div class="card">
+                            <div class="card-content">
+                                <h3>Skill Assessment Engine</h3>
+                                <ul class="feature-list">
+                                    <li>Technology-specific evaluations (React, Node.js, Flutter, etc.)</li>
+                                    <li>Logical reasoning assessments</li>
+                                    <li>Performance-based ranking system</li>
+                                    <li>Automatic skill verification</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="card">
+                            <div class="card-content">
+                                <h3>Intelligent Matching</h3>
+                                <ul class="feature-list">
+                                    <li>AI-powered job recommendations</li>
+                                    <li>Candidate-to-position matching algorithms</li>
+                                    <li>Strength-based opportunity suggestions</li>
+                                    <li>Multi-criteria evaluation system</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="card">
+                            <div class="card-content">
+                                <h3>Administration Tools</h3>
+                                <ul class="feature-list">
+                                    <li>Question bank management</li>
+                                    <li>Test creation and customization</li>
+                                    <li>Technology category management</li>
+                                    <li>Assessment metrics tracking</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Implementation Details -->
+            <section id="implementation">
+                <h2 class="section-heading">Technical Implementation</h2>
+                <p>Recruit AI is built using modern technologies and frameworks to ensure scalability, performance, and maintainability.</p>
+                
+                <div class="tech-stack">
+                    <span class="tech-badge">React.js</span>
+                    <span class="tech-badge">Node.js</span>
+                    <span class="tech-badge">Express</span>
+                    <span class="tech-badge">MongoDB</span>
+                    <span class="tech-badge">Redux</span>
+                    <span class="tech-badge">Machine Learning</span>
+                    <span class="tech-badge">JWT Authentication</span>
+                </div>
+                
+                <div class="implementation">
+                    <h3>Architecture Overview</h3>
+                    <p>The project follows a modular architecture with separate components for assessment, recommendation, user management, and administration.</p>
+                    
+                    <img src="ERD_RecruitAI.jpg" alt="Recruit AI Architecture Diagram">
+                    
+                    <h3>Key Components</h3>
+                    <div class="card-container">
+                        <div class="card">
+                            <div class="card-content">
+                                <h4>Assessment Module</h4>
+                                <p>Handles skill tests, logical assessments, and scoring algorithms. Tests are categorized by technology and difficulty level.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="card">
+                            <div class="card-content">
+                                <h4>Recommendation Engine</h4>
+                                <p>Uses candidate performance data to suggest suitable job roles and match candidates with recruiters' requirements.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="card">
+                            <div class="card-content">
+                                <h4>Admin Dashboard</h4>
+                                <p>Provides tools for managing test content, adding/removing questions, and organizing technology categories.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- GitHub Repository Section -->
+            <section id="github" class="github-section">
+                <h2 class="section-heading">GitHub Repository</h2>
+                <p>The complete source code, documentation, and resources for Recruit AI are available on GitHub.</p>
+                
+                <a href="https://github.com/Muhammadqasim8/RecuritAI.git" class="cta-button">View Repository</a>
+                
+                <div class="fair-principles">
+                    <h3>FAIR Principles Implementation</h3>
+                    <p>Our project follows the FAIR principles (Findable, Accessible, Interoperable, Reusable) to ensure maximum utility and impact.</p>
+                    
+                    <div class="fair-grid">
+                        <div class="fair-card">
+                            <h4>Findable</h4>
+                            <p>Comprehensive metadata, clear documentation, and structured JSON-LD data for search engine discoverability.</p>
+                        </div>
+                        
+                        <div class="fair-card">
+                            <h4>Accessible</h4>
+                            <p>Open repository access, well-defined API endpoints, and standardized data retrieval methods.</p>
+                        </div>
+                        
+                        <div class="fair-card">
+                            <h4>Interoperable</h4>
+                            <p>Standard data formats, RESTful API design, and compatibility with common recruitment data models.</p>
+                        </div>
+                        
+                        <div class="fair-card">
+                            <h4>Reusable</h4>
+                            <p>Modular code structure, clear licensing, and extensive documentation for component reuse.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2025 Recruit AI - Final Year Project</p>
+            <div class="footer-links">
+                <a href="https://github.com/Muhammadqasim8/RecuritAI.git">GitHub</a>
+                <!-- <a href="https://github.com/username/recruit-ai/wiki">Documentation</a> -->
+                <a href="mailto:sheraazdev@gmail.com">Contact</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
